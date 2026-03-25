@@ -1,0 +1,719 @@
+/* 1. Reset (Keep this as is) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    line-height: 1.6; /* Reduced this slightly, 2.6 is very large */
+}
+
+/* 2. Optimized Navbar */
+.navbar {
+    background-color: #290b14; 
+    color: white;              
+    width: 100%;               
+    height: 160px;
+    
+    display: flex;
+    align-items: center;      /* Vertically centers the content */
+    
+    /* REMOVED: justify-content: center (This was fighting your left alignment) */
+    justify-content: space-between; 
+    
+    /* This adds a safe "cushion" so text never touches the actual edge */
+    padding-left: 5%; 
+    padding-right: 5%;
+}
+
+/* 3. The Button (No more negative margins!) */
+.textbutton {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    
+    /* REMOVED: margin-left: -90% */
+    /* This makes sure the button stays visible as the screen shrinks */
+    display: inline-block;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px; /* This controls the small space BETWEEN Home and About */
+}
+.navbutton {
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem;
+}
+.toph1{
+    font-size: 4rem;
+    color: #290b14;
+    text-align: center;
+    margin-top: 50px;
+    font-weight:620;
+}
+.topp{
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ 
+body {
+    background-color: rgba(221, 211, 214, 0.7); 
+    margin: 0;                
+    min-height: 200vh !important;        
+    color: white;            
+    font-family: 'Courier New', monospace;
+    display: flex;
+    flex-direction: column;
+}
+.destinations-grid {
+    display: grid;
+    
+   grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+
+
+
+.place-card span {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #290b14;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Times, Times New Roman, serif
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media (min-width: 1024px) {
+    .destinations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.filter-btn {
+    
+    padding: 12px 25px; 
+    font-size: 1.1rem; 
+    font-weight: 200;
+    font-family: 'Courier New', monospace;
+    height: 60px;;
+    border-radius: 50px;
+    margin: 5px; 
+    background-color: #290b14; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+}
+
+.filter-btn:hover {
+    transform: scale(1.05);
+}
+.category-filters {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center; 
+}
+
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
+    
+}
+
+
+.place-card {
+    background-color: rgba(255, 255, 255, 0.8); 
+ 
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.place-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-header {
+    position: relative;
+    height: 350px;
+    
+}
+
+.card-header img {
+    width: 100%;
+    height: 200%;
+    object-fit: cover !important; 
+}
+
+
+.category-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); 
+    
+  
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    
+    padding: 5px;
+    text-align: left;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-family: 'Courier New', monospace;
+   
+}
+
+.card-details {
+    padding: 10px;
+    text-align: left;
+}
+
+.card-details h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #222;
+    font-family: 'Courier New', monospace;
+}
+
+.location {
+    color: #777;
+    font-size: 0.9rem;
+    margin: 5px 0 15px 0;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.description {
+    color: #444;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    font-family: Didot, serif;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+}
+
+.best-time {
+    font-size: 1rem;
+    color: #290b14;
+    font-weight: 400;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    padding: 2px;
+    letter-spacing: 1px;
+}
+.category-tag {
+    font-family: 'Courier New', monospace !important;
+    font-weight: 530 !important;
+}
+.card-details {
+    padding: 25px;
+    text-align: left;
+    
+    
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.description {
+    color: #444;
+    line-height: 1.4;
+    
+   
+    flex-grow: 1; 
+    margin-bottom: 20px;
+}
+
+.best-time {    
+  
+    border-top: 2px solid #290b14; 
+    padding-top: 15px;
+    margin-top: auto; 
+}.place-card {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    position: relative;
+    height: 250px; 
+    width: 100%;
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;}
+
+.card-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  
+    flex-grow: 1; 
+}
+
+.description {
+    
+    flex-grow: 1; 
+    margin-bottom: 20px;
+}
+
+#notification-popup {
+    position: fixed;
+    top: -100px; /* Hidden above the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #a88686; /* Matches your active button green */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: top 0.5s ease; /* Animation for sliding down */
+}
+
+#notification-popup.show {
+    top: 15.39%; /* Slides down to the top of the page */
+}
+.destinations-grid {
+    display: grid;
+    /* CHANGE: Instead of auto-fit, we use auto-fill and set a fixed max width */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 450px)); 
+    
+    gap: 30px;
+    padding: 40px 5%;
+    justify-content: center; /* This keeps the 1 or 2 cards centered on the screen */
+}
+.place-card {
+    max-width: 450px; /* Matches the grid column size */
+    width: 100%;
+    /* ... rest of your code ... */
+}
+ul {
+    list-style-type: none; /* This removes the dots */
+    padding: 0;            /* Removes the default indent */
+    margin: 0;
+}
+
+/* Or, if you want to be more specific to that section */
+.topp ul {
+    list-style-type: none;
+    padding: 0;
+}
+/* 1. Ensure the header is the anchor for the button */
+.card-header {
+    position: relative;
+    overflow: hidden;
+    height: 250px; /* Adjust based on your preference */
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. Style the Favorite Button */
+.fav-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    
+    /* Colors & Shape */
+    background-color: rgb(122, 0, 0);
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 25px; /* Creates the pill shape */
+    
+    /* Typography */
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    
+    
+    /* Shadow & Effects */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* 3. Hover Effect */
+.fav-btn:hover {
+    background-color: #46140e; /* Changes to red on hover */
+    color: white;
+    transform: scale(1.05); /* Slight pop effect */
+}
+
+/* 4. Style the Category Tag (Nature & Adventure) while we are at it */
+.category-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #444;
+    text-transform: uppercase;
+}
+/* The main container for your cards */
+.destinations-grid {
+    display: grid;
+    gap: 30px; /* Space between the cards */
+    padding: 20px;
+    max-width: 1200px; /* Keeps the grid from getting too wide on massive monitors */
+    margin: 0 auto;    /* Centers the whole grid on the page */
+    
+    /* Default: 3 columns for desktop */
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Responsive: 2 cards for tablets */
+@media (max-width: 1024px) {
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: 1 card for mobile phones */
+@media (max-width: 600px) {
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.footer {
+    background-color: #290b14;
+    color: white;
+    text-align: center;
+    padding: 30px 0; /* Increased padding for better breathing room */
+    font-family: 'Courier New', monospace;
+    margin-top: auto;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.08); /* Subtle premium glass look */
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smoother animation */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* This targets the SVG inside your link to match your image style */
+.social-icons a svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 1.5; /* This thin line is the secret to the 'premium' look */
+}
+
+.social-icons a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+/* Ensure the body takes up the full screen height */
+
+
+/* 1. The Wrapper: This keeps the footer at the bottom even on empty pages */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 2. The Content: This forces the "scroll-to-see" behavior */
+.main-content {
+    flex: 1; /* This pushes the footer to the very bottom of the container */
+    
+    /* Set this to at least 100vh so the footer starts just off-screen.
+       Change to 120vh if you want the user to HAVE to scroll more. */
+    min-height: 110vh; 
+    
+    /* Added some padding so your "Discover" text isn't touching the header */
+    padding-top: 100px;
+    background-color: #e5e0e0; /* Matches your light gray background */
+}
+
+/* 3. The Footer: Stays at the bottom */
+.footer {
+    background-color: #290b14;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: auto; /* Safety push */
+}
+/* --- LAYOUT FIXES --- */
+
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    min-height: 110vh; /* Forces scroll to see footer */
+    background-color: #e5e0e0;
+}
+
+/* --- PREMIUM FOOTER STYLING --- */
+.footer {
+    background-color: #290b14;
+    color: #ffffff;
+    padding: 80px 5% 40px 5%;
+    font-family: 'Courier New', monospace;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr; /* Balanced columns */
+    gap: 40px;
+}
+
+.footer-col h4 {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 5px; /* Subtle interaction */
+}
+
+/* Newsletter Styles */
+.newsletter-text {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.newsletter-form input {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+    outline: none;
+}
+
+.newsletter-form button {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.footer-bottom hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 30px;
+}
+
+.footer-bottom p {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    opacity: 0.4;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(4, 0, 0, 0.1);
+    border-radius: 50%;
+    color: white;
+    transition: 0.4s;
+}
+
+.social-icons a:hover {
+    background: white;
+    color: #290b14;
+    transform: translateY(-5px);
+}
+.footer {
+    background-color: #290b14;
+    color: #ffffff;
+    padding: 80px 5% 40px 5%;
+    font-family: 'Courier New', monospace;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    gap: 40px;
+}
+
+.footer-col {
+    text-align: left; 
+}
+
+
+.social-icons {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 15px;
+    margin-top: 20px;
+}
+.newsletter-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+}
+.filter-btn {
+    /* 1. Make the text smaller */
+    font-size: 0.9rem !important;
+    
+    /* 2. Tighten the internal space (Top/Bottom 6px, Left/Right 14px) */
+    padding: 1% 2% !important;
+    
+    /* 3. Ensure they don't have a forced minimum width */
+    min-width: auto !important;
+    width: auto !important;
+    
+    /* 4. Refined premium styling */
+    font-family: 'Courier New', monospace;
+    background-color: #290b14;
+    color: white;
+    border: none;
+    border-radius: 50px; /* Keeps the pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+/* 5. Subtle hover effect */
+.filter-btn:hover {
+    background-color: #4a1424;
+    transform: translateY(-2px);
+}
+
+/* 6. Style for the active button */
+.filter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px; /* Reduced gap between buttons */
+    margin: 10px auto;
+    max-width: 10000px;
+}
